@@ -21,6 +21,18 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #28284b;
   }
+}
+
+.purple {
+  color: #B1B2FF
+}
+
+canvas { 
+  /* height: 100vh;  */
+  /* width: 100vw;  */
+  display: block;
+  position: absolute;
+  z-index: -1;
 }
