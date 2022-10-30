@@ -6,6 +6,16 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --greenwhite: #ccddcc;
+  --textGradient: linear-gradient(
+    to right,
+    #d6b1d3,
+    #a0a3de,
+    rgb(158, 199, 206)
+  );
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -15,24 +25,31 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: #28284b;
-  }
+body {
+  color: var(--greenwhite);
+  background: #28284b;
+}
+
+section {
+  padding: 4rem 0;
 }
 
 .purple {
-  color: #B1B2FF
+  color: #b1b2ff;
 }
 
-canvas { 
-  /* height: 100vh;  */
-  /* width: 100vw;  */
+canvas {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: -1;
+}
+
+.gradientText {
+  font-size: 2rem;
+  background: var(--textGradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  margin: 0px;
 }

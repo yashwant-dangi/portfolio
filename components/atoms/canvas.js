@@ -5,6 +5,7 @@ const Canvas = (props) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const width = document.documentElement.clientWidth;
@@ -14,11 +15,11 @@ const Canvas = (props) => {
     canvas.style.width = width;
     canvas.style.height = height;
     let arrry = [];
-    // const width = 1500;
-    // const height = 700;
 
-    for (let i = 0; i < width; i = i + 25) {
-      for (let j = 0; j < height; j = j + 25) {
+    const distanceBetweenDots = isMobile ? 10 : 20;
+
+    for (let i = 0; i < width; i = i + distanceBetweenDots) {
+      for (let j = 0; j < height; j = j + distanceBetweenDots) {
         arrry.push({
           lat: i,
           lng: j,
@@ -26,14 +27,12 @@ const Canvas = (props) => {
       }
     }
 
-    console.log(arrry);
-
     ctx.fillStyle = "#EEF1FF22";
     ctx.shadowColor = "#EEF1FF44";
     ctx.shadowBlur = 8;
 
     ctx.beginPath();
-    let radius = 5;
+    let radius = isMobile ? 3 : 5;
 
     for (let a = 0; a < arrry.length; a++) {
       const p = arrry[a],
@@ -48,15 +47,7 @@ const Canvas = (props) => {
     ctx.fill();
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      //   width="100vw"
-      //   height="100vh"
-      //   style={{ width: "100vw", height: "100vh" }}
-      //   {...rest}
-    />
-  );
+  return <canvas ref={canvasRef} />;
 };
 
 function CanvasDraw() {

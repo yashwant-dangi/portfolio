@@ -1,0 +1,43 @@
+.card {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    100% 111111.11% at 0% 50%,
+    #8040bb 0%,
+    #2080ff 28.44%,
+    #4060ff 63.85%,
+    #4080bb 100%
+  );
+  padding: 1px;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    106.16% 165.06% at 0 0,
+    #201040 2.49%,
+    #151030 32.18%,
+    #100510 100%
+  );
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  font-size: 0.8rem;
+  margin: 4px 0;
+}
