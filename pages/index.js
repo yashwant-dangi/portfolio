@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import About from "../components/About";
 import CanvasDraw from "../components/atoms/canvas";
 import CardList from "components/CardList";
+import Projects from "components/Projects";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         </main>
         <About />
         <CardList />
+        <Projects />
       </div>
     </>
   );

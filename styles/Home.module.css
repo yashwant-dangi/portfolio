@@ -72,6 +72,11 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  background: var(--textGradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
 }
 
 .title,
